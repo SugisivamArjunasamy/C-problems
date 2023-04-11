@@ -15,9 +15,6 @@ int main()
         array[i]=array[i-1];
         array[2]=25;
     }
-
-
     return 0;
     
-
 }
