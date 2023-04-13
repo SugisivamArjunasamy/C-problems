@@ -8,5 +8,6 @@ int main()
     //prinnting the ASCII value of the charecter
     printf("The ASCII value of %c=%d",a,a);
 
+    
     return 0;
 }
