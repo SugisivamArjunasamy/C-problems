@@ -18,5 +18,7 @@ int main()
         printf("%d is a not an polindrome number",num2);
     
 
+    
+    
     return 0;
 }
