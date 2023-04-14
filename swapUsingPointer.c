@@ -9,6 +9,8 @@ int main()
     swap(&a,&b);
     return 0;
 }
+
+
 int swap(int *a,int *b)
 {
     int c=*a;
