@@ -28,5 +28,7 @@ int main()
         printf("\nThe marks : %.1f\n",s[i].marks);
     }
 
+    
+    
     return 0;
 }
