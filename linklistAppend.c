@@ -10,9 +10,6 @@ struct node{
 
 
 
-
-
-
 void append ( struct node**head, int data ){
     struct node *new_node;
     new_node=(struct node*)malloc(sizeof(struct node));
