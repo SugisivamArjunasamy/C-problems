@@ -28,6 +28,8 @@ void display ( struct node *head )
     printf("NULL\n");
 }
 
+
+
 int main() {
     struct node *head=NULL;
     int n,data;
