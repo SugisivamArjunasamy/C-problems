@@ -54,6 +54,8 @@ int count ( struct node * q ) {
 }
 
 
+
+
 int main() {
     struct node *q=NULL;
     int n,data;
