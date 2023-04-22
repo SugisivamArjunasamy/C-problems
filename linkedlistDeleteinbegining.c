@@ -28,6 +28,7 @@ void append ( struct node **head, int data ) {
 	}
 }
 
+
 void display ( struct node *head)
 {
     struct node *temp=head;
