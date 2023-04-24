@@ -1,7 +1,7 @@
 #include <stdio.h>
  
 int sum (int a);
- 
+  
 int main()
 {
     int num, result;
