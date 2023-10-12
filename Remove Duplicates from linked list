@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void append(struct node **head, int data)
+{
+    struct node *new_node = (struct node *)malloc(sizeof(struct node));
+    new_node->data = data;
+    new_node->next = NULL;
+
+    if (*head == NULL)
+    {
+        *head = new_node;
+    }
+    else
+    {
+        struct node *temp = *head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = new_node;
+    }
+}
+
+void removeDuplicates(struct node *head)
+{
+    if (head == NULL)
+        return;
+
+    struct node *current = head;
+    while (current->next != NULL)
+    {
+        if (current->data == current->next->data)
+        {
+            struct node *next_next = current->next->next;
+            free(current->next);
+            current->next = next_next;
+        }
+        else
+        {
+            current = current->next;
+        }
+    }
+}
+
+void display(struct node *head)
+{
+    struct node *temp = head;
+    while (temp != NULL)
+    {
+        printf("%d->", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+int main()
+{
+    struct node *head = NULL;
+    int n, value;
+
+    printf("Enter number of nodes: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the list in sorted order: ");
+    while (n--)
+    {
+        scanf("%d", &value);
+        append(&head, value);
+    }
+
+    printf("Original sorted list:\n");
+    display(head);
+
+    removeDuplicates(head);
+
+    printf("List after removing duplicates:\n");
+    display(head);
+
+    return 0;
+}
